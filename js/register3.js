@@ -1,9 +1,12 @@
 let submit = document.getElementById("submit");
 submit.addEventListener("click", registerdetails)
-const toast = document.getElementById('toast');
+
+let msgdiv = document.getElementById("msgdiv");
+
+let result = true;
+let arr = [];
 
 function checkedvalue() {
-    let arr = [];
     let div_checkbox = document.getElementById("div_checkbox");
     let checklist = div_checkbox.querySelectorAll("input[type='checkbox']:checked");
 
@@ -11,7 +14,20 @@ function checkedvalue() {
         arr.push(checklist[i].value);
     }
     if (checklist.length == 0) {
-        alert("Please Select Atleast one Vertical");
+        result = false;
+        msgdiv.className = "alert alert-warning alert-dismissible fade show with-icon";
+        msgdiv.role = "alert";
+        msgdiv.innerHTML = "Please select atleast one vertical";
+        let btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "close";
+        btn.setAttribute("data-dismiss", "alert");
+        btn.ariaLabel = "Close";
+        let btnspan = document.createElement("span");
+        btnspan.ariaHidden = true;
+        btn.innerText = "\u00D7";
+        btn.append(btnspan);
+        msgdiv.append(btn);
     }
     else {
         return (arr.toString());
@@ -29,27 +45,43 @@ function ValidateEmail(inputText) {
 }
 
 function Validation() {
-    let result = true;
 
+    let email = document.getElementById("inputEmail4");
+
+    if (!ValidateEmail(email.value)) {
+        result = false;
+        msgdiv.className = "alert alert-warning alert-dismissible fade show with-icon";
+        msgdiv.role = "alert";
+        msgdiv.innerHTML = "Please enter valid e-mail id";
+        let btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "close";
+        btn.setAttribute("data-dismiss", "alert");
+        btn.ariaLabel = "Close";
+        let btnspan = document.createElement("span");
+        btnspan.ariaHidden = true;
+        btn.innerText = "\u00D7";
+        btn.append(btnspan);
+        msgdiv.append(btn);
+    }
     let pass = document.getElementById("Password4");
     let confirmpass = document.getElementById("confirmPassword4");
 
     if (pass.value != confirmpass.value) {
         result = false;
-        confirmpass.setCustomValidity("Passwords Don't Match");
-    }
-    else {
-        confirmpass.setCustomValidity("");
-    }
-
-    let email = document.getElementById("inputEmail4");
-
-    if (ValidateEmail(email.value)) {
-        email.setCustomValidity("");
-    }
-    else {
-        result = false;
-        email.setCustomValidity("Please enter valid E-mail id");
+        msgdiv.className = "alert alert-warning alert-dismissible fade show with-icon";
+        msgdiv.role = "alert";
+        msgdiv.innerHTML = "Passwords doesn't match";
+        let btn = document.createElement("button");
+        btn.type = "button";
+        btn.className = "close";
+        btn.setAttribute("data-dismiss", "alert");
+        btn.ariaLabel = "Close";
+        let btnspan = document.createElement("span");
+        btnspan.ariaHidden = true;
+        btn.innerText = "\u00D7";
+        btn.append(btnspan);
+        msgdiv.append(btn);
     }
     return result;
 }
@@ -65,10 +97,10 @@ function registerdetails(e) {
 
     e.preventDefault();
 
-    if (Validation()) {
+    if (Validation() && checkedvalue()) {
         let queryParams = getQueryParams("company", document.getElementById("inputco-name").value, true)
         queryParams = queryParams + getQueryParams("first_name", document.getElementById("inputfull-name").value)
-        queryParams = queryParams + getQueryParams("last_name", checkedvalue())
+        queryParams = queryParams + getQueryParams("last_name", arr.toString())
         queryParams = queryParams + getQueryParams("signup_ip", "1234")
         queryParams = queryParams + getQueryParams("email", document.getElementById("inputEmail4").value)
         queryParams = queryParams + getQueryParams("password", document.getElementById("Password4").value)
@@ -82,7 +114,7 @@ function registerdetails(e) {
         queryParams = queryParams + getQueryParams("country", document.getElementById("inputCountry").value)
         queryParams = queryParams + getQueryParams("im_value", document.getElementById("inputSkype").value)
         queryParams = queryParams + getQueryParams("im_type", "")
-        queryParams = queryParams + getQueryParams("status", "pending")
+        queryParams = queryParams + getQueryParams("status", "Pending")
         queryParams = queryParams + getQueryParams("mid", "16319")
         queryParams = queryParams + getQueryParams("api-key", "16319PQSZRLABJKHGMCU")
         queryParams = queryParams + getQueryParams("secret-key", "37174A90862A8146AE3F441A1B9C0ECA")
@@ -99,22 +131,35 @@ function registerdetails(e) {
             .then(response => {
                 console.log(response)
                 if (response.status == 200) {
-                    var x = document.getElementById("toastbox");
-                    x.className = "show";
-                    x.querySelector("#t-header").innerHTML = "Success";
-                    x.querySelector("#t-text").innerHTML = document.getElementById("inputfull-name").value + " is Successfully registered";
-                    x.style.backgroundColor = "#1481e7";
-                    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+                    msgdiv.className = "alert alert-success";
+                    msgdiv.role = "alert";
+                    msgdiv.innerHTML = document.getElementById("inputfull-name").value + "is successfully registered";
+                    let btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "close";
+                    btn.setAttribute("data-dismiss", "alert");
+                    btn.ariaLabel = "Close";
+                    let btnspan = document.createElement("span");
+                    btnspan.ariaHidden = true;
+                    btn.innerText = "\u00D7";
+                    btn.append(btnspan);
+                    msgdiv.append(btn);
                     redirectPage();
                 }
                 else {
-                    var x = document.getElementById("toastbox");
-
-                    x.className = "show";
-                    x.querySelector("#t-header").innerHTML = "Failed";
-                    x.querySelector("#t-text").innerHTML = response.error;
-                    x.style.backgroundColor = "red";
-                    setTimeout(function () { x.className = x.className.replace("show", ""); }, 3000);
+                    msgdiv.className = "alert alert-danger";
+                    msgdiv.role = "alert";
+                    msgdiv.innerHTML = response.error;
+                    let btn = document.createElement("button");
+                    btn.type = "button";
+                    btn.className = "close";
+                    btn.setAttribute("data-dismiss", "alert");
+                    btn.ariaLabel = "Close";
+                    let btnspan = document.createElement("span");
+                    btnspan.ariaHidden = true;
+                    btn.innerText = "\u00D7";
+                    btn.append(btnspan);
+                    msgdiv.append(btn);
                 }
             })
             .catch(err => console.error(err));
@@ -122,6 +167,6 @@ function registerdetails(e) {
 }
 
 function redirectPage() {
-    let redirectUrl = "http://127.0.0.1:5500/login3.html";
+    let redirectUrl = "http://127.0.0.1:5501/login3.html";
     window.location.href = redirectUrl;
 }

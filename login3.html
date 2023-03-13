@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/iofrm-theme3.css">
     <link rel="stylesheet" type="text/css" href="css/login.css">
 </head>
+
 <body>
     <div class="form-body">
         <div class="website-logo">
@@ -34,42 +36,45 @@
                         <div class="page-links">
                             <a href="login3.html" class="active">Login</a>
                         </div>
-                        <div class="alert alert-warning alert-dismissible fade show with-icon" role="alert">
+                        <div class="alert alert-warning alert-dismissible fade show with-icon" role="alert" id="msgdiv">
                             Please fill the following form with your information
                             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
+                                <span aria-hidden="true">&times;</span>
                             </button>
                         </div>
                         <form>
-                            <input class="form-control" type="text" name="username" placeholder="E-mail Address" id="user_email" required>
-                            <input class="form-control" type="password" name="password" placeholder="Password" id="user_password" required>
+                            <input class="form-control" type="text" name="username" placeholder="E-mail Address"
+                                id="user_email" required>
+                            <input class="form-control" type="password" name="password" placeholder="Password"
+                                id="user_password" required>
                             <div class="form-button">
-                                <button id="login-submit" type="submit" class="btn btn-primary">Login</button> 
+                                <button id="login-submit" type="submit" class="btn btn-primary">Login</button>
                                 <a href="forget3.html">Forget password?</a>
                             </div>
-							<div class="page-links">
-							<a href="register3.html"  >Don't Have Account ?? Signup </a>
-							</div>
+                            <div class="page-links">
+                                <a href="register3.html">Don't Have Account ?? Signup </a>
+                            </div>
                         </form>
-                        
+
                     </div>
                 </div>
             </div>
         </div>
     </div>
     <div id="toastbox">
-        <div id="t-body"> 
+        <div id="t-body">
             <div class="toast-header">
-              <strong id="t-header" class="mr-auto"></strong>
-              <small id="t-time">Just now</small>
+                <strong id="t-header" class="mr-auto"></strong>
+                <small id="t-time">Just now</small>
             </div>
             <div id="t-text" class="toast-body"></div>
-          </div>
+        </div>
     </div>
-<script src="js/login3.js"></script>
-<script src="js/jquery.min.js"></script>
-<script src="js/popper.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
+    <script src="js/login3.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
+
 </html>
