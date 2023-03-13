@@ -1,0 +1,37 @@
+.form-content .form-items {
+    max-width: 420px;
+    text-align: left;
+}
+
+
+.form-content input[type=checkbox]:not(:checked) + label, .form-content input[type=checkbox]:checked + label, .form-content input[type=radio]:not(:checked) + label, .form-content input[type=radio]:checked + label {
+    color: #6c757d;
+    font-weight: 700;
+}
+
+.form-content input[type=checkbox]:checked + label, .form-content input[type=radio]:checked + label {
+    color: #6c757d;
+}
+
+.form-content input[type=checkbox]:checked + label:before, .form-content input[type=radio]:checked + label:before {
+    background: #6c757d;
+    border: 0px solid #6c757d;
+}
+
+.form-content input[type=checkbox]:not(:checked) + label:before, .form-content input[type=radio]:not(:checked) + label:before {
+    background: transparent;
+    border: 2px solid #6c757d;
+}
+
+.form-content input[type=checkbox]:not(:checked) + label:after, .form-content input[type=checkbox]:checked + label:after {
+    color: #fff;
+}
+
+.form-content input[type=radio]:not(:checked) + label:after, .form-content input[type=radio]:checked + label:after {
+    background-color: #6c757d;
+}
+
+.form-content .custom-options input[type=checkbox]:not(:checked) + label, .form-content .custom-options input[type=checkbox]:checked + label, .form-content .custom-options input[type=radio]:not(:checked) + label, .form-content .custom-options input[type=radio]:checked + label {
+    color: #606060;
+    background-color: #fff;
+}

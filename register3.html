@@ -1,183 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>iofrm</title>
-  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
-  <link rel="stylesheet" type="text/css" href="css/iofrm-style.css">
-  <link rel="stylesheet" type="text/css" href="css/iofrm-theme3.css">
-  <link rel="stylesheet" type="text/css" href="css/register3.css">
-</head>
-
-<body>
-  <div class="form-body">
-    <div class="website-logo">
-      <a href="index.html">
-        <div class="logo">
-          <img class="logo-size" src="images/logo-light.svg" alt="">
-        </div>
-      </a>
-    </div>
-    <div class="row">
-      <div class="img-holder">
-        <div class="bg"></div>
-        <div class="info-holder">
-
-        </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iofrm</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" type="text/css" href="css/iofrm-style.css">
+    <link rel="stylesheet" type="text/css" href="css/iofrm-theme3.css">
+    <link rel="stylesheet" type="text/css" href="css/register3.css">
+    <link rel="stylesheet" type="text/css" href="mystyles.css">
+  </head>
+  <body>
+    <div class="form-body">
+      <div class="website-logo">
+        <a href="index.html">
+          <div class="logo">
+            <img class="logo-size" src="images/logo-light.svg" alt="">
+          </div>
+        </a>
       </div>
-      <div class="form-holder">
-        <div class="form-content">
-          <div class="form-items">
-            <h3>Get more things done with Loggin platform.</h3>
-            <p>Access to the most powerfull tool in the entire design and web
-              industry.</p>
-            <div class="page-links">
-              <a href="login3.html">Login</a><a href="register3.html" class="active">Register</a>
+      <div class="row">
+        <div class="img-holder">
+          <div class="bg"></div>
+          <div class="info-holder">
+
+          </div>
+        </div>
+        <div class="form-holder">
+          <div class="form-content">
+            <div class="form-items">
+              <h3>Get more things done with Loggin platform.</h3>
+              <p>Access to the most powerfull tool in the entire design and web
+                industry.</p>
+              <div class="page-links">
+                <a href="login3.html">Login</a><a href="register3.html"
+                  class="active">Register</a>
+              </div>
+              <form>
+                <div class="form-row">
+                  <div class="col-md-6">
+                    <!-- <label for="inputcompanyname">Company Name</label> -->
+                    <input type="text" class="form-control" id="inputco-name"
+                      placeholder="Enter company name">
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <label for="inputFullname">Full Name</label> -->
+                    <input type="text" class="form-control" id="inputfull-name"
+                      placeholder="Enter your full name" required>
+                  </div>
+                </div>
+                <div class="form-row ">
+                  <!-- <label for="inputEmail4">Email</label> -->
+                  <div class="col-md-12">
+                    <input type="email" class="form-control" id="inputEmail4"
+                      placeholder="Enter your email" required>
+                  </div>
+                </div>
+                <div class="form-row ">
+                  <div class="col-md-6">
+                    <!-- <label for="inputPassword4">Password</label> -->
+                    <input type="password" class="form-control"
+                      id="inputPassword4" placeholder="Enter password" required>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <label for="inputPassword4">Confirm Password</label> -->
+                    <input type="password" class="form-control"
+                      id="inputPassword4" placeholder="Enter confirm password" required>
+                  </div>
+                </div>
+                <div class="form-row ">
+                  <!-- <label for="inputEmail4">Email</label> -->
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" id="inputAddress"
+                      placeholder="Enter address">
+                  </div>
+                </div>
+                <div class="form-row ">
+                  <div class="col-md-6">
+                    <!-- <label for="inputCity">City</label> -->
+                    <input type="text" class="form-control" id="inputCity"
+                      placeholder="Enter city" required>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <label for="inputState">State</label> -->
+                    <input type="text" class="form-control" id="inputState"
+                      placeholder="Enter state">
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <label for="inputCountry">Country</label> -->
+                    <input type="text" class="form-control" id="inputCountry"
+                      placeholder="Enter country" required>
+                  </div>
+                  <div class="col-md-6">
+                    <!-- <label for="inputZip">Zipcode</label> -->
+                    <input type="text" class="form-control" id="inputZip"
+                      placeholder="Enter zipcode">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <label for="inputVertical" class="text-body"> <b>Vertical</b></label>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck1" required>
+                    <label  for="customCheck1" class="text-secondary">Home Improvement</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck2" required>
+                    <label  for="customCheck2" class="text-secondary">Home Warranty</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck3" required>
+                    <label  for="customCheck3" class="text-secondary">Insurance</label>
+                  </div>
+                  <div class=" col-md-6"  >
+                    <input type="checkbox"  id="customCheck4" required>
+                    <label  for="customCheck4" class="text-secondary">Solar</label>
+                  </div>
+                  <div class=" col-md-6 ">
+                    <input type="checkbox"  id="customCheck5" required>
+                    <label  for="customCheck5" class="text-secondary">Mortgages</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck6" required>
+                    <label  for="customCheck6" class="text-secondary">Finance</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck7" required>
+                    <label  for="customCheck7" class="text-secondary">Loan</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck8" required>
+                    <label  for="customCheck8" class="text-secondary">Dating</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck9" required>
+                    <label  for="customCheck9" class="text-secondary">Sweepstakes</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck10" required>
+                    <label  for="customCheck10" class="text-secondary">Survey</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck11" required>
+                    <label  for="customCheck11" class="text-secondary">CC Submit</label>
+                  </div>
+                  <div class=" col-md-6">
+                    <input type="checkbox"  id="customCheck12" required>
+                    <label  for="customCheck12" class="text-secondary">Other</label>
+                  </div>
+                </div>
+                <br>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <input type="text" class="form-control" id="inputSkype"
+                      placeholder="Enter skype address">
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-12">
+                    <i>By registering you agree to the Apprizz</i>&nbsp;<a href="#">Terms of Use</a>
+                  </div>
+                </div>
+                <div class="form-row" style="padding-top: 10px;">
+                  <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary">Sign Up</button>                  
+                  </div>
+                </div>
+              </form>
             </div>
-            <form>
-              <div class="form-row">
-                <div class="col-md-6">
-                  <!-- <label for="inputcompanyname">Company Name</label> -->
-                  <input type="text" class="form-control" id="inputco-name" placeholder="Enter company name">
-                </div>
-                <div class="col-md-6">
-                  <!-- <label for="inputFullname">Full Name</label> -->
-                  <input type="text" class="form-control" id="inputfull-name" placeholder="Enter your full name"
-                    required>
-                </div>
-              </div>
-              <div class="form-row ">
-                <!-- <label for="inputEmail4">Email</label> -->
-                <div class="col-md-12">
-                  <input type="text" class="form-control" id="inputEmail4" placeholder="Enter your email" name="email"
-                    required>
-                </div>
-              </div>
-              <div class="form-row ">
-                <div class="col-md-6">
-                  <!-- <label for="inputPassword4">Password</label> -->
-                  <input type="password" class="form-control" id="Password4" placeholder="Enter password" required>
-                </div>
-                <div class="col-md-6">
-                  <!-- <label for="inputPassword4">Confirm Password</label> -->
-                  <input type="password" class="form-control" id="confirmPassword4" placeholder="Enter confirm password"
-                    required>
-                </div>
-              </div>
-              <div class="form-row ">
-                <!-- <label for="inputEmail4">Email</label> -->
-                <div class="col-md-12">
-                  <input type="text" class="form-control" id="inputAddress" placeholder="Enter address">
-                </div>
-              </div>
-              <div class="form-row ">
-                <div class="col-md-6">
-                  <!-- <label for="inputCity">City</label> -->
-                  <input type="text" class="form-control" id="inputCity" placeholder="Enter city">
-                </div>
-                <div class="col-md-6">
-                  <!-- <label for="inputState">State</label> -->
-                  <input type="text" class="form-control" id="inputState" placeholder="Enter state">
-                </div>
-                <div class="col-md-6">
-                  <!-- <label for="inputCountry">Country</label> -->
-                  <input type="text" class="form-control" id="inputCountry" placeholder="Enter country">
-                </div>
-                <div class="col-md-6">
-                  <!-- <label for="inputZip">Zipcode</label> -->
-                  <input type="text" class="form-control" id="inputZip" placeholder="Enter zipcode">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-12">
-                  <label for="inputVertical"> <b>Vertical</b></label>
-                </div>
-              </div>
-              <div class="form-row" id="div_checkbox">
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck1" value="Home Improvement">
-                  <label for="customCheck1" class="text-secondary">Home Improvement</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck2" value="Home Warranty">
-                  <label for="customCheck2" class="text-secondary">Home Warranty</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck3" value="Insurance">
-                  <label for="customCheck3" class="text-secondary">Insurance</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck4" value="Solar">
-                  <label for="customCheck4" class="text-secondary">Solar</label>
-                </div>
-                <div class=" col-md-6 ">
-                  <input type="checkbox" id="customCheck5" value="Mortgages">
-                  <label for="customCheck5" class="text-secondary">Mortgages</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck6" value="Finance">
-                  <label for="customCheck6" class="text-secondary">Finance</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck7" value="Loan">
-                  <label for="customCheck7" class="text-secondary">Loan</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck8" value="Dating">
-                  <label for="customCheck8" class="text-secondary">Dating</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck9" value="Sweepstakes">
-                  <label for="customCheck9" class="text-secondary">Sweepstakes</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck10" value="Survey">
-                  <label for="customCheck10" class="text-secondary">Survey</label>
-                </div>
-                <div class=" col-md-6">
-                  <input type="checkbox" id="customCheck11" value="CC Submit">
-                  <label for="customCheck11" class="text-secondary">CC Submit</label>
-                </div>
-              </div>
-              <br>
-              <div class="form-row">
-                <div class="col-md-12">
-                  <input type="text" class="form-control" id="inputSkype" placeholder="Enter skype address">
-                </div>
-              </div>
-              <div class="form-row">
-                <div class="col-md-12">
-                  <i>By registering you agree to the Apprizz</i>&nbsp;<a href="#">Terms of Use</a>
-                </div>
-              </div>
-              <div class="form-row" style="padding-top: 10px;">
-                <div class="col-md-12">
-                  <button type="submit" id="submit" class="btn btn-primary">Sign-UP</button>
-                </div>
-              </div>
-            </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div id="toastbox">
-    <div id="t-body">
-      <div class="toast-header">
-        <strong id="t-header" class="mr-auto"></strong>
-        <small id="t-time">Just now</small>
-      </div>
-      <div id="t-text" class="toast-body"></div>
-    </div>
-  </div>
-  <script src="js/register3.js"></script>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
-</body>
 
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
 </html>
